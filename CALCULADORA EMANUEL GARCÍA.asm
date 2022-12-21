@@ -124,7 +124,7 @@ division:
     ;pero en la linea 147 a la 178 si lo logre con otro metodo
     ;call pedir_num ;we call the function pedir_num
     mov eax, 10   ;we move the number in the eax register
-    mov ebx, 2
+    mov ebx, 2;we move the number in the ebx register
     mov edx, 0
     div ebx ;perform the division of the two values
     aam;divide the number by 10 and store the result in ah and the remainder in al
