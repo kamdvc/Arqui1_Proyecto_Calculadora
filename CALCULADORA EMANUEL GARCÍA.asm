@@ -195,10 +195,10 @@ pedir_num:
     mov eax, 1; sys_exit system call
 
 mostrar_resul:   ; con este codigo se mostraba el resultado pero al revés 
-    mov [resultado], eax; We move the result to eax
-    mov edx, len3 ;message length
-    mov ecx, msg3 ;message to write
-    mov eax, SYS_WRITE;system call number (sys_write)
+	mov [resultado], eax; We move the result to eax
+	mov edx, len3 ;message length
+	mov ecx, msg3 ;message to write
+	mov eax, SYS_WRITE;system call number (sys_write)
 	mov ebx, 1;error code
 	int  SYS_INIT_MODULE;invoke kernel
 	mov eax, SYS_WRITE;system call number (sys_write)
@@ -224,12 +224,12 @@ section	.data
 msg	db 10,13,	'Bienvenido a la calculadora!',0xa	;our dear string
 	db	'Creado por Emanuel García',0xa	;our dear string
 	db	'Que deseas realizar',0xa	;our dear string
-    db	'1-SUMAR',0xa	;our dear string
-    db	'2-RESTAR',0xa	;our dear string0
-    db	'3-MULTIPLICAR',0xa	;our dear string
-    db	'4-DIVIDIR',0xa	;our dear string
-    db	'5-POTENCIA',0xa	;our dear string
-    db	'6-SALIR',0xa	;our dear string
+	db	'1-SUMAR',0xa	;our dear string
+	db	'2-RESTAR',0xa	;our dear string0
+	db	'3-MULTIPLICAR',0xa	;our dear string
+	db	'4-DIVIDIR',0xa	;our dear string
+	db	'5-POTENCIA',0xa	;our dear string
+	db	'6-SALIR',0xa	;our dear string
 len	equ	$ - msg			;length of our dear string
 msg1  db	'Ingrese el primer numero',0xa	;our dear string
 len1	equ	$ - msg1			;length of our dear string
@@ -239,5 +239,5 @@ msg3  db	'Resultado: ',0xa	;our dear string
 len3	equ	$ - msg3			;length of our dear string
 msg4  db	10	;our dear string
 len4	equ	$ - msg4			;length of our dear string
-msg5  db	'Opción no valida',0xa	;our dear string
+msg5  db	'Opción no valida!',0xa	;our dear string
 len5	equ	$ - msg5			;length of our dear string
