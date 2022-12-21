@@ -56,7 +56,7 @@ suma:
     mov eax, 10 ;we move the number in the eax register
     mov ebx, 6 ;we move the number in the ebx register
     add eax, ebx;performed the sum of the two values
-    aam
+    aam;divide the number by 10 and store the result in ah and the remainder in al
     add eax, 3030h  ;we add 3030h to eax to convert to ascii
     mov ebp, esp;we save esp information in ebp
     sub esp, 2 ;subtract 2 bytes from the stack
@@ -79,7 +79,7 @@ resta:
     mov eax, 18 ;we move the number in the eax register
     mov ebx, 10 ;we move the number in the ebx register
     sub eax, ebx;we perform the subtraction of the two values
-    aam
+    aam;divide the number by 10 and store the result in ah and the remainder in al
     add eax, 3030h ;we add 3030h to eax to convert to ascii
     mov ebp, esp;we save esp information in ebp
     sub esp, 2 ;subtract 2 bytes from the stack
@@ -102,7 +102,7 @@ multiplicacion:
     mov eax, 3   ;we move the number in the eax register
     mov ebx, 6  ;we move the number in the ebx register
     mul ebx ; We perform the multiplication of the two values
-    aam
+    aam;divide the number by 10 and store the result in ah and the remainder in al
     add eax, 3030h ;we add 3030h to eax to convert to ascii
     mov ebp, esp;we save esp information in ebp
     sub esp, 2;subtract 2 bytes from the stack
@@ -127,7 +127,7 @@ division:
     mov ebx, 2
     mov edx, 0
     div ebx ;perform the division of the two values
-    aam
+    aam;divide the number by 10 and store the result in ah and the remainder in al
     add eax, 3030h  ;we add 3030h to eax to convert to ascii
     mov ebp, esp;we save esp information in ebp
     sub esp, 2 ;subtract 2 bytes from the stack
@@ -154,7 +154,7 @@ potencia:
     jg potencia; jump to potencia if greater
     mov eax, 1; sys_exit system call
     mul esi;multiply esi 
-    aam
+    aam;divide the number by 10 and store the result in ah and the remainder in al
     add eax, 3030h ;we add 3030h to eax to convert to ascii
     mov ebp, esp;we save esp information in ebp
     sub esp, 2 ;subtract 2 bytes from the stack
