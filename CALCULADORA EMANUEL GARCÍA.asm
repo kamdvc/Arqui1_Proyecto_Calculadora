@@ -45,7 +45,7 @@ _start:                     ;tell linker entry point
     mov eax, 4;system call number (sys_write)
     mov ebx, 1; stdout file descriptor
     int 0x80;invoke kernel
-    jmp exit;Jump to statement labeled exit
+    jmp _start;Jump to the statement labeled _start
     mov	eax, 1	    ;system call number (sys_exit)
     int	0x80        ;call kernel
 
