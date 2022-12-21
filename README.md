@@ -5,11 +5,14 @@ https://www.tutorialspoint.com/compile_assembly_online.php
 copy and paste the code on the page
 click on execute
 When executing the program, the following menu will appear
+
 ![Imagen1](https://user-images.githubusercontent.com/119770780/208806097-554db141-8dc8-4ec2-be63-d5be75199d4f.png)
+
 We begin with the execution of the program where the menu of options that the calculator has with its respective operations is shown, which are: addition, subtraction, multiplication, division, power.
 In order to display the menu
 We define a variable of global type, we call the _start tag that starts the service
 ![Imagen2](https://user-images.githubusercontent.com/119770780/208806263-60ae7bea-20e3-4f8a-a2a3-0121666ec7dd.png)
+
 Within this label we call the variable "msg" found in the .data section, where the constants are and all the menu information with their respective options. So we also call the variable "len" that gives us the length of the message. We use system write or its equivalent = 4 to write the message.
 Then we close the connection by calling interrupt 0x80= SYS_INIT_MODULE
 ![Imagen3](https://user-images.githubusercontent.com/119770780/208806339-bb421e89-d584-4b22-9ee5-457a68951526.png)
